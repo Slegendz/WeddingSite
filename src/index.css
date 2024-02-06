@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@400;500;600&family=Nunito:wght@400;500;600;700&family=Oswald:wght@400;500&display=swap');
+
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+button{
+  font: inherit;
+}
+
+
+html {
+  font-family: 'Oswald', system-ui, sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body{
+  font-weight: 400;
+  background-color: white;
+  color: #121212;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Nunito', sans-serif;
+}
+
+a{
+  font-family: inherit;
+  text-decoration: none;
+  color: white;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    color: white;
+    background-color: #242424;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */

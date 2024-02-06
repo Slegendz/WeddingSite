@@ -1,0 +1,77 @@
+.site-navbar{
+    background-color: #121212;
+}
+
+.site-navbar-logo{
+    width: 15%;
+    /* background-color: blue; */
+}
+
+
+.site-navbar-logo img{
+    width: 80px;
+    height: 60px;
+    outline: none;
+}
+
+.site-navbar-section{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: brown; */
+}
+
+.site-navbar-section-links{
+    width: 90%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.site-navbar-section-links a{
+    outline: none;
+    font-size: 19px;
+    letter-spacing: 0.25px;
+    list-style: none;
+    padding: 1.3rem 1rem;
+    color: white;
+    font-weight: 400;
+    transition: all 0.3s ease-in-out;
+    /* background-color: blue; */
+    position: relative;
+}
+
+
+.site-navbar-section-links .active,
+.site-navbar-section-links a:hover,
+.site-navbar-section-links a:focus{
+    color: gold;
+    /* filter: drop-shadow(4px 2px 5px #646cffaa); */
+}
+
+.site-navbar-section-links a::before{
+    content: "";
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0;
+    background-color: gold;
+    height: 4px;
+    z-index: 2;
+    transition: all 0.2s ease-in-out;
+}
+
+.site-navbar-section-links a:hover::before,
+.site-navbar-section-links a:focus::before{
+    opacity: 1;
+}
+
+.site-navbar-section-icons{
+    width: 10%;
+    background-color: green;
+}
+
+

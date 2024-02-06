@@ -1,0 +1,17 @@
+.App{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* .logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+} */
+
+.Home{
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+  flex-direction: column;
+}
