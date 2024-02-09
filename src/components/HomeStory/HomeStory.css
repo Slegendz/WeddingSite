@@ -1,0 +1,21 @@
+.home-content-story{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.home-content-story img{
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.home-content-story h5{
+    font-size: 1.4rem;
+    padding: 0.5rem;
+}

@@ -2,7 +2,9 @@ import React from 'react'
 
 const Cinematography = () => {
   return (
-    <div>Cinematography</div>
+    <div className = "cinematography">
+cine
+    </div>
   )
 }
 

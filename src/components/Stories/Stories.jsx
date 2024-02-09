@@ -2,7 +2,9 @@ import React from 'react'
 
 const Stories = () => {
   return (
-    <div>Stories</div>
+    <div className = "stories">
+      Stories
+      </div>
   )
 }
 

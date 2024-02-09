@@ -35,20 +35,23 @@
     font-size: 19px;
     letter-spacing: 0.25px;
     list-style: none;
-    padding: 1.3rem 1rem;
     color: white;
     font-weight: 400;
     transition: all 0.3s ease-in-out;
     /* background-color: blue; */
+    padding: 1.3rem 1rem;
     position: relative;
 }
 
+
+.navbar-light .navbar-nav .nav-link.active{
+    color: gold;
+}
 
 .site-navbar-section-links .active,
 .site-navbar-section-links a:hover,
 .site-navbar-section-links a:focus{
     color: gold;
-    /* filter: drop-shadow(4px 2px 5px #646cffaa); */
 }
 
 .site-navbar-section-links a::before{
@@ -74,4 +77,22 @@
     background-color: green;
 }
 
+.navbar-light .navbar-toggler{
+    color: white;
+    font-size: 1.6rem;
+    border-radius: 0;
+    outline: none;
+    border: none;
+}
+
+.navbar-light .navbar-toggler:focus{
+    box-shadow: none;
+    text-decoration: none;
+}
+
+.navbar-light .navbar-toggler:hover,
+.navbar-light .navbar-toggler:focus{
+    border: 2px solid palevioletred;
+    border-radius: 8px;
+}
 
