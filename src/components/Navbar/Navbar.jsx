@@ -1,14 +1,10 @@
 import React from "react";
-// import logo from "../../assets/Img/logo.svg";
 import { Container, Navbar, Nav } from "react-bootstrap";
 import facebook from "../../assets/Icons/facebook.svg";
-import whatsapp from "../../assets/Icons/whatsapp.svg";
-import youtube from "../../assets/Icons/youtube.svg";
-import instagram from "../../assets/Icons/instagram.svg";
-import { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import "./navbar.css";
+import icons from "../../assets/Icons/headerIcon";
 
 const navbar = () => {
   const navigation = [
@@ -21,32 +17,20 @@ const navbar = () => {
   ];
 
   return (
-    <Navbar
-      collapseOnSelect
-      style={{ padding: 0 }}
-      expand="lg"
-      className="site-navbar"
-    >
-      <Container className="site-navbar-container">
-        <Navbar.Brand href="#" className="site-navbar-logo">
+    <Navbar collapseOnSelect style={{ padding: 0 }} expand="lg">
+      <Container className = "navbar-container">
+        <Navbar.Brand href="#">
           <img src={facebook} alt="facebook" />
         </Navbar.Brand>
 
-        <Navbar.Toggle
-          className="site-navbar-toggle"
-          aria-controls="responsive-navbar-nav"
-        >
+        <Navbar.Toggle aria-controls="responsive-navbar-nav">
           <RxHamburgerMenu />
         </Navbar.Toggle>
 
-        <Navbar.Collapse
-          id="responsive-navbar-nav"
-          className="site-navbar-section"
-        >
-          <Nav className="me-auto site-navbar-section-links">
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav>
             {navigation.map((obj, idx) => (
               <Nav.Link
-                style={{ padding: "1.3rem 1rem" }}
                 as={NavLink}
                 to={obj.link}
                 key={idx}
@@ -57,7 +41,15 @@ const navbar = () => {
               </Nav.Link>
             ))}
           </Nav>
-          <div className="site-navbar-section-icons"></div>
+
+          <Nav>
+            {icons.map((icon, idx) => (
+              <a key={idx} href={icon.url} target="_blank" rel="noopener noreferrer" className = "nav-links-icon">
+                <img src={icon.img} alt={icon.title} />
+              </a>
+            ))}
+          </Nav>
+          
         </Navbar.Collapse>
       </Container>
     </Navbar>

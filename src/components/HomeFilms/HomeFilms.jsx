@@ -19,22 +19,3 @@ const HomeFilms = ({ url }) => {
 
 export default HomeFilms;
 
-{
-  /* <ReactPlayer  playing /> */
-}
-{
-  /* { class Example extends React.Component {
-            render() {
-              const opts = {
-                height: '390',
-                width: '640'
-              };
-
-              return <YouTube className="home-films-wrapper-player"  videoId={url} opts={opts} />;
-            }
-          }
-        } */
-}
-{
-  /* <YouTube className="home-films-wrapper-player" videoId={url} />; */
-}

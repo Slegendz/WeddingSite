@@ -2,20 +2,22 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./Footer.css";
 import facebook from "../../assets/Icons/facebook.svg";
+import icons from "../../assets/Icons/footerIcon";
+
 const Footer = () => {
   return (
     <div className="footer">
-      <Container>
-        <Row >
-          <Col size={12} sm={3}>
+      <Container fluid>
+        <Row>
+          <Col size={12} md={3}>
             <div className="footer-nav1 footer-nav">
               <img src={facebook} width="42" height="42" alt="facebook" />
               <p> Mangal Tithi </p>
             </div>
           </Col>
-          <Col size={12} sm={3}>
+          <Col size={12} md={3}>
             <div className="footer-nav2 footer-nav">
-            <h4> Links </h4>
+              <h4> Links </h4>
               <a href="#"> about </a>
               <a href="#"> about </a>
               <a href="#"> about </a>
@@ -23,20 +25,32 @@ const Footer = () => {
               <a href="#"> about </a>
             </div>
           </Col>
-          <Col size={12} sm={3}>
+          <Col size={12} md={3}>
             <div className="footer-nav3 footer-nav">
               <h4> Follow us for more</h4>
               <div className="footer-nav3-socials">
-                <img src={facebook} width="42" height="42" alt="facebook" />
-                <img src={facebook} width="42" height="42" alt="facebook" />
-                <img src={facebook} width="42" height="42" alt="facebook" />
-                <img src={facebook} width="42" height="42" alt="facebook" />
+                {icons.map((icon, idx) => (
+                  <a
+                    key={idx}
+                    href={icon.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="footer-links-icon"
+                  >
+                    <img
+                      width="36px"
+                      height="36px"
+                      src={icon.img}
+                      alt={icon.title}
+                    />
+                  </a>
+                ))}
               </div>
             </div>
           </Col>
-          <Col size={12} sm={3}>
+          <Col size={12} md={3}>
             <div className="footer-nav4 footer-nav">
-            <h4> Contact </h4>
+              <h4> Contact </h4>
               <a href="mailto:negisachin750@gmail.com" target="_blank">
                 negisachin750@gmail.com
               </a>

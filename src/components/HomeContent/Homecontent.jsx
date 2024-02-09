@@ -70,7 +70,6 @@ const Homecontent = () => {
     },
   };
 
-
   const videoUrl = ["mb3axOiJlSM", "G1655oteWTk", "N0suplyQuVE", "7FbROJKlTYM"];
 
   return (
@@ -130,13 +129,17 @@ const Homecontent = () => {
             </p>
           </Col>
         </Row>
+      </Container>
 
+      <Container className = "home-films-container">
         <Row className="home-content-films">
           {videoUrl.map((url, idx) => (
             <HomeFilms url={url} key={idx} />
           ))}
         </Row>
+      </Container>
 
+      <Container>
         <Row className="home-content-desc">
           <Col
             size={12}

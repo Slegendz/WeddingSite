@@ -11,15 +11,28 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 0.4rem;
+}
+
+.footer-nav a{
+    font-size: 1rem;
 }
 
 .footer-nav3-socials{
     display: flex;
+    justify-content: center;
     flex-direction: row;
+    gap: 0.5rem;
 }
 
 .footer-nav-copyright{
     width: 100%;
     text-align: center;
     margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 768px){
+    .footer-nav{
+        margin-bottom: 1.5rem;
+    }
 }

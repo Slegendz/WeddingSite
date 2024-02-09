@@ -5,6 +5,7 @@ import Vid from "../../assets/Vid/vid.mp4";
 import HomeContent from "../HomeContent/Homecontent"
 import homeBg from "./home-bg.png";
 import shwetaVid from "./shweta.mp4"
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -15,13 +16,10 @@ const Home = () => {
             <video className="home-banner-vid" muted autoPlay>      { /* autoPlay muted */}
               <source src={shwetaVid} type="video/mp4" />
             </video>
-            {/* <div className="home-banner-bg">
-              <img src= {homeBg} alt="home-bg" />
-            </div> */}
             <div className="home-banner-content">
-              <h3>Welcome to</h3>
               <h1>Mangal Tithi</h1>
-              <button> Portfolio </button>
+              <h4>Candid Photography & Cinematography</h4>
+              <button> <Link to = "/portfolio"> Portfolio </Link> </button>
             </div>
           </Col>
 
