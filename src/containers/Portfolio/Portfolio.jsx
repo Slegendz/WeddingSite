@@ -50,6 +50,8 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio">
+      
+      
       <Container className="portfolio-container" style={{ padding: "2rem 8%" }}>
         <h2> Portfolio </h2>
         <ResponsiveMasonry
