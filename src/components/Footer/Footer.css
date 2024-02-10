@@ -14,8 +14,33 @@
     gap: 0.4rem;
 }
 
+.footer-nav-contact,
+.footer-nav-links{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.footer-nav-contact a,
+.footer-nav-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+/* .footer-nav2-links{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: flex-start;
+} */
+
 .footer-nav a{
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .footer-nav3-socials{
