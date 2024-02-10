@@ -1,6 +1,6 @@
 .home-content {
     width: 100%;
-    margin: 0.8rem 0;
+    margin-bottom: 0.8rem;
     padding: 0.5rem 0;
 }
 
@@ -15,9 +15,12 @@
 }
 
 .home-content-container-desc {
-    /* display: flex; */
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: 1rem;
+    text-align: center;
 }
 
 .home-content-container-desc h2 {
@@ -33,7 +36,7 @@
 
 .home-content-container-desc h2::before {
     content: "";
-    height: 4px;
+    height: 5px;
     border-radius: 5px;
     width: 50%;
     position: absolute;

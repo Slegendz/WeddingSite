@@ -8,11 +8,8 @@ import HomeFilms from "../HomeFilms/HomeFilms";
 import HomeStory from "../HomeStory/HomeStory";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import DataContext from "../../context/DataContext";
 
 const Homecontent = () => {
-  const { index, setIndex } = useContext(DataContext);
-  const { showLightbox, setShowLightbox } = useContext(DataContext);
 
   const stories = [
     {
@@ -27,7 +24,7 @@ const Homecontent = () => {
     },
     {
       id: 3,
-      title: "zavina X zavin",
+      title: "zavsina X zavin",
       img: images[2].img,
     },
     {
@@ -80,7 +77,7 @@ const Homecontent = () => {
           <Col sm={10} lg={8} className="home-content-container-desc ">
             <h2> Wedding Photography & Cinematography </h2>
             <p>
-              Welcome to Mangal Tithi! We are a Wedding Photography Studio
+              We are a Wedding Photography Studio
               located in Dehradun, India. We're known for our fun,
               unconventional, and contemporary style in capturing the special
               moments of your big day. We began by photographing Indian weddings
