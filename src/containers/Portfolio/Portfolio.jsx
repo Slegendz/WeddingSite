@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import portfolioImages from "../../assets/Portfolio/index";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import "./Portfolio.css";
 import LightBox from "../../components/LightBox/LightBox";
 import DataContext from "../../context/DataContext";
@@ -11,6 +11,7 @@ import DataContext from "../../context/DataContext";
 // } from "react-lazy-load-image-component";
 // import "react-lazy-load-image-component/src/effects/blur.css";
 // import LazyLoad from "react-lazyload";
+import BannerImg from "../../assets/back-img/img7.png";
 
 const Portfolio = () => {
   const { index, setIndex, showLightbox, setShowLightbox } =
@@ -50,7 +51,17 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio">
-      
+      {/* <Container fluid style={{ padding: 0 }}>
+        <Row className="g-0">
+          <Col size={12} className = "portfolio-banner">
+            <img src={BannerImg} alt="bannerImg" />
+            <div className="portfolio-banner-content">
+              <h1> Portfolio </h1>
+              <h4> Best Moments of our wedding couples </h4>
+            </div>
+          </Col>
+        </Row>
+      </Container> */}
       
       <Container className="portfolio-container" style={{ padding: "2rem 8%" }}>
         <h2> Portfolio </h2>
