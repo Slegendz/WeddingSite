@@ -3,7 +3,7 @@ import { Container, Navbar, Nav } from "react-bootstrap";
 import MangalLogo from "../../assets/Icons/logo-min.png"
 import { NavLink } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
-import "./navbar.css";
+import "./Navbar.css";
 import icons from "../../assets/Icons/headerIcon";
 
 const navbar = () => {
