@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Col } from "react-bootstrap";
 import "./HomeGallery.css"
+import DataContext from "../../context/DataContext";
 
+const HomeGallery = ({ img, title, idx }) => {
+  const { index, setIndex, showLightbox, setShowLightbox } = useContext(DataContext);
 
-const HomeGallery = ({ img, title, idx, setShowLightbox, setIndex}) => {
   const showImage = (idx) => {
     setShowLightbox(true);
     setIndex(idx);

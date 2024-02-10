@@ -1,7 +1,7 @@
 import ig from "./instagram.png"
 import yt from "./youtube.svg"
 import wa from "./whatsapp.svg"
-import fb from "./facebook.svg"
+import fb from "./fb-logo.svg"
 
 export default [
     { img: yt, title: "Youtube", url: "https://www.youtube.com/@SpunkyMushroom" },

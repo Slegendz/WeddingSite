@@ -1,18 +1,22 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useContext } from "react";
 import "./LightBox.css";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
 import { IoIosShareAlt, IoMdDownload } from "react-icons/io";
 import { useSwipeable } from "react-swipeable";
 import { saveAs } from "file-saver";
-import images from "../../assets/Img/index";
+import DataContext from "../../context/DataContext";
+import "animate.css";
 
-const LightBox = ({ index, setIndex, showLightbox, setShowLightbox }) => {
+const LightBox = ({ images }) => {
+  const { index, setIndex } = useContext(DataContext);
+  const { showLightbox, setShowLightbox } = useContext(DataContext);
+  
   const imgRef = useRef();
   const lbTags = ["path", "svg", "BUTTON", "polyline", "IMG", "P"];
 
   const closeMenu = (e) => {
-    if (imgRef.current && !lbTags.includes(e.target.tagName)){
+    if (imgRef.current && !lbTags.includes(e.target.tagName)) {
       setShowLightbox(false);
     }
   };
@@ -42,73 +46,80 @@ const LightBox = ({ index, setIndex, showLightbox, setShowLightbox }) => {
   const downloadImage = (img, title) => {
     saveAs(img, title + ".jpg"); // Put your image URL here.
   };
+  
+  let imgNum = index+1;
+  let title = "Mangal-tithi-portfolio-" + imgNum;
 
   return (
     <>
-        <div className = {`gallery-lb ${showLightbox ? "" : " gallery-hide"} `}>
-          <div {...handlers} className="gallery-lb-wrapper">
-            {images.map((image, idx) => {
-              const { id, img, title } = image;
+      <div
+        className={`gallery-lb animate__animated animate__fadeIn ${
+          showLightbox ? "" : " gallery-hide"
+        } `}
+      >
+        <div {...handlers} className="gallery-lb-wrapper">
+          {images.map((image, idx) => {
+            const { id, img } = image;
 
-              let position = "nextSlide";
-              if (idx === index) position = "activeSlide";
-              if (
-                idx === index - 1 ||
-                (index === 0 && idx === images.length - 1)
-              ) {
-                position = "lastSlide";
-              }
+            let position = "nextSlide";
+            if (idx === index) position = "activeSlide";
+            if (
+              idx === index - 1 ||
+              (index === 0 && idx === images.length - 1)
+            ) {
+              position = "lastSlide";
+            }
+            
+            return (
+              <div
+                key={id}
+                className={`gallery-lb-wrapper-section ${position} `}
+              >
+                <div className="gallery-lb-wrapper-section-icons">
+                  <p className="animate__animated animate__fadeIn">
+                    {index + 1} / {images.length}
+                  </p>
 
-              return (
-                <div
-                  key={id}
-                  className={`gallery-lb-wrapper-section ${position} `}
-                >
-                  <div className="gallery-lb-wrapper-section-icons">
-                    <p>
-                      {index + 1} / {images.length}
-                    </p>
-
-                    <div className="lb-wrapper-section-icons-buttons">
-                      <button
-                        className="share-icon"
-                        onClick={() => downloadImage(img, title)}
-                      >
-                        <IoMdDownload />
-                      </button>
-                      <button className="share-icon">
-                        <IoIosShareAlt />
-                      </button>
-                      <button
-                        className="close-icon"
-                        onClick={() => setShowLightbox(false)}
-                      >
-                        <RxCross2 />
-                      </button>
-                    </div>
-                  </div>
-
-                  <div className="gallery-lb-wrapper-section-fig">
-                    <div className="gallery-fig-img">
-                      <img ref={imgRef} src={img} alt={title} />
-                    </div>
-                    <div className="gallery-fig-title">
-                      <p> {title} </p>
-                    </div>
+                  <div className="lb-wrapper-section-icons-buttons animate__animated animate__fadeIn">
+                    <button
+                      className="share-icon"
+                      onClick={() => downloadImage(img, title)}
+                    >
+                      <IoMdDownload />
+                    </button>
+                    <button className="share-icon">
+                      <IoIosShareAlt />
+                    </button>
+                    <button
+                      className="close-icon"
+                      onClick={() => setShowLightbox(false)}
+                    >
+                      <RxCross2 />
+                    </button>
                   </div>
                 </div>
-              );
-            })}
 
-            <button className="prev" onClick={() => setIndex(index - 1)}>
-              <FiChevronLeft />
-            </button>
+                <div className="gallery-lb-wrapper-section-fig">
+                  <div className="gallery-fig-img">
+                    <img ref={imgRef} src={img} alt={title} />
+                  </div>
+                  <div className="gallery-fig-title">
+                    <p> {title} </p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
 
-            <button className="next" onClick={() => setIndex(index + 1)}>
-              <FiChevronRight />
-            </button>
-          </div>
+          <button className="prev" onClick={() => setIndex(index - 1)}>
+            <FiChevronLeft />
+          </button>
+
+          <button className="next" onClick={() => setIndex(index + 1)}>
+            <FiChevronRight />
+          </button>
         </div>
+      </div>
     </>
   );
 };

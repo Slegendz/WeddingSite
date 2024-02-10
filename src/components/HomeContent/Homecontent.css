@@ -24,6 +24,9 @@
     font-weight: 600;
     padding: 0.8rem;
     font-size: 2.4rem;
+    font-family: "Yanone Kaffeesatz";
+    letter-spacing: 0.5px;
+    color: #16202fdb;
     position: relative;
     margin-bottom: 1.5rem;
 }
@@ -42,6 +45,7 @@
 
 .home-content-container-desc p {
     font-size: 1.1rem;
+    color: #7a7a7a;
 }
 
 .home-content-films,

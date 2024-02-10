@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
-import facebook from "../../assets/Icons/facebook.svg";
+import MangalLogo from "../../assets/Icons/logo-min.png"
 import { NavLink } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import "./navbar.css";
@@ -18,9 +18,9 @@ const navbar = () => {
 
   return (
     <Navbar collapseOnSelect style={{ padding: 0 }} expand="lg">
-      <Container className = "navbar-container">
+      <Container className="navbar-container"  style = {{ padding: 0 }}>
         <Navbar.Brand href="#">
-          <img src={facebook} alt="facebook" />
+          <img src={MangalLogo} alt="Logo" />
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="responsive-navbar-nav">
@@ -44,12 +44,17 @@ const navbar = () => {
 
           <Nav>
             {icons.map((icon, idx) => (
-              <a key={idx} href={icon.url} target="_blank" rel="noopener noreferrer" className = "nav-links-icon">
+              <a
+                key={idx}
+                href={icon.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-links-icon"
+              >
                 <img src={icon.img} alt={icon.title} />
               </a>
             ))}
           </Nav>
-          
         </Navbar.Collapse>
       </Container>
     </Navbar>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./Homecontent.css";
 import images from "../../assets/Img/index";
@@ -8,10 +8,11 @@ import HomeFilms from "../HomeFilms/HomeFilms";
 import HomeStory from "../HomeStory/HomeStory";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import DataContext from "../../context/DataContext";
 
 const Homecontent = () => {
-  const [showLightbox, setShowLightbox] = useState(false);
-  const [index, setIndex] = useState(0);
+  const { index, setIndex } = useContext(DataContext);
+  const { showLightbox, setShowLightbox } = useContext(DataContext);
 
   const stories = [
     {
@@ -79,35 +80,24 @@ const Homecontent = () => {
           <Col sm={10} lg={8} className="home-content-container-desc ">
             <h2> Wedding Photography & Cinematography </h2>
             <p>
-              Welcome to Mangal Tithi! We are a Wedding Photography Studio based
-              in Dehradun, India and are known for a fun, off-beat and modern
-              approach to creating stories from the best day in your life. We
-              started photographing Indian weddings, and since then have created
-              hundreds of unique love stories across the world. We are
-              passionate, hard-working and an incredibly motivated team; we love
-              Indian weddings, and can’t wait to be a part of yours!
+              Welcome to Mangal Tithi! We are a Wedding Photography Studio
+              located in Dehradun, India. We're known for our fun,
+              unconventional, and contemporary style in capturing the special
+              moments of your big day. We began by photographing Indian weddings
+              and have since crafted countless unique love stories globally. Our
+              team is passionate, dedicated, and eager to be a part of your
+              Indian wedding celebration!
             </p>
           </Col>
         </Row>
 
         <Row className="home-content-gallery">
           {images.map((image, idx) => (
-            <HomeGallery
-              key={image.id}
-              {...image}
-              setShowLightbox={setShowLightbox}
-              setIndex={setIndex}
-              idx={idx}
-            />
+            <HomeGallery key={image.id} {...image} idx={idx} />
           ))}
         </Row>
 
-        <LightBox
-          index={index}
-          setIndex={setIndex}
-          showLightbox={showLightbox}
-          setShowLightbox={setShowLightbox}
-        />
+        <LightBox images={images} />
 
         <Row className="home-content-desc">
           <Col
@@ -118,26 +108,26 @@ const Homecontent = () => {
           >
             <h2> Indian Wedding Films </h2>
             <p>
-              Just like wedding photography, Indian Wedding Movies have
-              transformed from simple coverage into thematic documentary style
-              wedding films. Our wedding movies are simple stories that tell the
-              tale of your wedding, filmed in our inimitable fun and off-beat
-              style. Using the very latest and best technology available, our
-              wedding films are tailor made for your big day and perfectly
-              complement your wedding photos. Every wedding film is tailor made
-              to your story, a few examples of which are below.
+              Just like how wedding photography has evolved over time, Indian
+              Wedding Movies have also changed. They used to just record what
+              happened, but now they're more like storytelling documentaries.
+              Our movies capture all the important moments of your wedding day,
+              but we do it in a fun and unique way. We use the latest technology
+              to make sure your film matches your style and goes well with your
+              photos. Each film is made to tell your own story, just like these
+              examples show.
             </p>
           </Col>
         </Row>
       </Container>
 
-      <Container className = "home-films-container">
-        <Row className="home-content-films">
-          {videoUrl.map((url, idx) => (
-            <HomeFilms url={url} key={idx} />
-          ))}
-        </Row>
-      </Container>
+        <Container className = "home-films-container">
+          <Row className="home-content-films">
+            {videoUrl.map((url, idx) => (
+              <HomeFilms url={url} key={idx} />
+            ))}
+          </Row>
+        </Container>
 
       <Container>
         <Row className="home-content-desc">

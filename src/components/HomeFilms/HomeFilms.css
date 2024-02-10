@@ -7,6 +7,7 @@
 }
 
 .home-films-wrapper-player{
+    border-radius: 10px;
     animation: fadeIn 0.5s;
     cursor: pointer;
     width: 100%;

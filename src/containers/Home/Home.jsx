@@ -2,10 +2,10 @@ import React from "react";
 import "./home.css";
 import { Container, Row, Col } from "react-bootstrap";
 import Vid from "../../assets/Vid/vid.mp4";
-import HomeContent from "../HomeContent/Homecontent"
-import homeBg from "./home-bg.png";
+import HomeContent from "../../components/HomeContent/Homecontent"
 import shwetaVid from "./shweta.mp4"
 import { Link } from "react-router-dom";
+import "animate.css";
 
 const Home = () => {
   return (
@@ -16,7 +16,7 @@ const Home = () => {
             <video className="home-banner-vid" muted autoPlay>      { /* autoPlay muted */}
               <source src={shwetaVid} type="video/mp4" />
             </video>
-            <div className="home-banner-content">
+            <div className="home-banner-content animate__animated animate__fadeIn">
               <h1>Mangal Tithi</h1>
               <h4>Candid Photography & Cinematography</h4>
               <button> <Link to = "/portfolio"> Portfolio </Link> </button>
