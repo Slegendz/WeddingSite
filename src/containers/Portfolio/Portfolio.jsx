@@ -11,7 +11,7 @@ import DataContext from "../../context/DataContext";
 // } from "react-lazy-load-image-component";
 // import "react-lazy-load-image-component/src/effects/blur.css";
 // import LazyLoad from "react-lazyload";
-import BannerImg from "../../assets/back-img/img7.png";
+import BannerImg from "./../../assets/Portfolio/img11.jpg";
 
 const Portfolio = () => {
   const { index, setIndex, showLightbox, setShowLightbox } =
@@ -51,7 +51,7 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio">
-      {/* <Container fluid style={{ padding: 0 }}>
+      <Container fluid style={{ padding: 0 }}>
         <Row className="g-0">
           <Col size={12} className = "portfolio-banner">
             <img src={BannerImg} alt="bannerImg" />
@@ -61,7 +61,7 @@ const Portfolio = () => {
             </div>
           </Col>
         </Row>
-      </Container> */}
+      </Container>
       
       <Container className="portfolio-container" style={{ padding: "2rem 8%" }}>
         <h2> Portfolio </h2>
