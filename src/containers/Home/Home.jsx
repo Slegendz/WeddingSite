@@ -1,5 +1,5 @@
 import React from "react";
-import "./home.css";
+import "./Home.css";
 import { Container, Row, Col } from "react-bootstrap";
 import Vid from "../../assets/Vid/vid.mp4";
 import HomeContent from "../../components/HomeContent/Homecontent"
