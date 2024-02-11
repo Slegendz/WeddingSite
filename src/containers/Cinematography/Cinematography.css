@@ -1,0 +1,189 @@
+.cinematography {
+    margin-top: 70px;
+}
+
+.cinematography-banner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.cinematography-banner img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cinematography-banner-content::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    content: '';
+    background-image: linear-gradient(to bottom,
+            rgba(14, 14, 14, 0.175),
+            rgba(0, 0, 0, 0.816));
+}
+
+.cinematography-banner-content {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cinematography-banner-content h4 {
+    font-size: 2vw;
+}
+
+.cinematography-banner-content h1 {
+    font-size: 9vw;
+}
+
+.cinematography-banner-content p {
+    font-size: 1.5rem;
+}
+
+.cinematography-banner-content h1,
+.cinematography-banner-content h4,
+.cinematography-banner-content p {
+    margin: 0.5rem 0;
+    z-index: 2;
+    font-family: "Poppins";
+    color: rgba(245, 245, 245, 0.685);
+}
+
+.cinematography-banner-content p {
+    margin: 0;
+}
+
+.cinematography-banner-content.animate__fadeIn {
+    animation: fadeIn 1.5s;
+}
+
+.cinematography-banner img.animate__fadeIn {
+    animation: fadeIn 0.8s;
+}
+
+.cinematography-images-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    padding: 0.4rem;
+}
+
+.cinematography-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cinematography-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cinematography-content h3 {
+    font-weight: 600;
+    font-size: 2.8rem;
+    font-family: "Yanone Kaffeesatz";
+    letter-spacing: 0.5px;
+    color: #16202fdb;
+    margin-top: 1.5rem;
+    position: relative;
+    align-items: center;
+}
+
+.cinematography-content h3::before {
+    content: "";
+    height: 5px;
+    border-radius: 5px;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: gold;
+}
+
+.cinematography-content p {
+    font-size: 1.1rem;
+    color: #7a7a7a;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.cinematography-content-films {
+    margin: 3rem 0;
+    padding: 0 2rem;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .cinematography-banner img {
+        height: max(200px, 50vh);
+    }
+
+    .cinematography-banner-content h1 {
+        font-size: max(2.8rem, 9vw);
+    }
+
+    .cinematography-banner-content h4 {
+        font-size: max(1.3rem, 3.5vw);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cinematography-films-container {
+        max-width: none;
+        width: 100%;
+    }
+
+    .cinematography-content-films {
+        padding: 0 1.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cinematography-content-films {
+        padding: 0 0rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .cinematography {
+        margin-top: 50px;
+    }
+
+    .cinematography-banner-content h1 {
+        font-size: max(2.15rem, 9vw);
+    }
+
+    .cinematography-content h3 {
+        font-size: 2.3rem;
+    }
+
+    .cinematography-content p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .cinematography-banner-content h1 {
+        font-size: 1.6rem;
+    }
+}
