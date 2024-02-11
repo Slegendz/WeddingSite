@@ -1,0 +1,214 @@
+.contact {
+    margin-top: 70px;
+}
+
+.contact-banner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-banner img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+}
+
+.contact-banner-content::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    content: '';
+    background-image: linear-gradient(to bottom,
+            rgba(14, 14, 14, 0.175),
+            rgba(0, 0, 0, 0.816));
+}
+
+.contact-banner-content {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-banner-content h4 {
+    font-size: 2vw;
+}
+
+.contact-banner-content h1 {
+    font-size: 9vw;
+}
+
+.contact-banner-content p {
+    font-size: 1.5rem;
+}
+
+.contact-banner-content h1,
+.contact-banner-content h4,
+.contact-banner-content p {
+    margin: 0.5rem 0;
+    z-index: 2;
+    font-family: "Poppins";
+    color: rgba(245, 245, 245, 0.685);
+}
+
+.contact-banner-content p {
+    margin: 0;
+}
+
+.contact-banner-content.animate__fadeIn {
+    animation: fadeIn 1.5s;
+}
+
+.contact-banner img.animate__fadeIn {
+    animation: fadeIn 0.8s;
+}
+
+.contact-images-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    padding: 0.4rem;
+}
+
+.contact-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-content h3 {
+    font-weight: 600;
+    font-size: 2.8rem;
+    font-family: "Yanone Kaffeesatz";
+    letter-spacing: 0.5px;
+    color: #16202fdb;
+    margin-top: 1.5rem;
+    position: relative;
+    align-items: center;
+}
+
+.contact-content h3::before {
+    content: "";
+    height: 5px;
+    border-radius: 5px;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: gold;
+}
+
+.contact-content p {
+    font-size: 1.1rem;
+    color: #7a7a7a;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.contact-wrapper {
+    color: #16202fdb;
+    margin: 2rem 0;
+}
+
+.contact-wrapper-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-wrapper-form h3 {
+    letter-spacing: 0.5px;
+    font-family: "Yanone Kaffeesatz";
+    font-weight: 600;
+    font-size: 2.8rem;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.contact-wrapper-form h3::before {
+    content: "";
+    height: 5px;
+    border-radius: 5px;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: gold;
+}
+
+/* .contact-box{
+    margin-top: 2rem;
+    background-color: gold;
+    height: 160px;
+}
+
+.contact-box-wrapper{
+    justify-content: center;
+}
+
+.contact-wrapper-contacts{
+
+} */
+
+@media screen and (max-width: 1024px) {
+    .contact-banner img {
+        height: max(200px, 50vh);
+    }
+
+    .contact-banner-content h1 {
+        font-size: max(3.5rem, 11vw);
+    }
+
+    .contact-banner-content h4 {
+        font-size: max(1.4rem, 4vw);
+    }
+
+    .contact-banner-content p {
+        font-size: 1.2rem;
+    }
+
+    .contact-wrapper{
+        margin-top: 1rem;
+        gap: 2rem;
+    }
+
+    .contact-wrapper-form{
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .contact {
+        margin-top: 50px;
+    }
+
+    .contact-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .contact-content p {
+        font-size: 1rem;
+    }
+}

@@ -115,25 +115,33 @@
     font-size: 1.1rem;
     color: #7a7a7a;
     text-align: center;
-    margin: 1.5rem;
+    margin: 1.5rem 0;
 }
 
 @media screen and (max-width: 1024px) {
     .portfolio-banner img {
-        height: 50vh;
+        height: max(200px, 50vh);
     }
 
     .portfolio-banner-content h1{
-        font-size: max(4rem, 11vw);
+        font-size: max(3.5rem, 11vw);
     }
 
     .portfolio-banner-content h4{
-        font-size: max(1.6rem, 4vw);
+        font-size: max(1.5rem, 4vw);
     }
 }
 
 @media screen and (max-width: 400px) {
     .portfolio{
         margin-top: 50px;
+    }
+
+    .portfolio-content h3{
+        font-size: 2.5rem;
+    }
+
+    .portfolio-content p{
+        font-size: 1rem;
     }
 }

@@ -1,4 +1,4 @@
-.about{
+.about {
     margin-top: 70px;
 }
 
@@ -13,6 +13,7 @@
     width: 100%;
     height: 70vh;
     object-fit: cover;
+    object-position: center center;
     object-position: center calc(50% + 60px);
 }
 
@@ -60,7 +61,7 @@
     color: rgba(245, 245, 245, 0.816);
 }
 
-.about-banner-content.animate__fadeIn{
+.about-banner-content.animate__fadeIn {
     animation: fadeIn 1.5s;
 }
 
@@ -75,35 +76,79 @@
     padding: 0.4rem;
 }
 
-.about-content-wrapper{
+.about-content-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-content h3 {
+    font-weight: 600;
+    font-size: 2.8rem;
+    font-family: "Yanone Kaffeesatz";
+    letter-spacing: 0.5px;
+    color: #16202fdb;
+    margin-top: 2rem;
+    position: relative;
+    align-items: center;
+}
+
+.about-content h3::before {
+    content: "";
+    height: 5px;
+    border-radius: 5px;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: gold;
 }
 
 .about-content p {
     font-size: 1.1rem;
     color: #7a7a7a;
     text-align: center;
-    margin: 2rem;
+    margin: 1rem 0 2rem 0;
 }
 
 @media screen and (max-width: 1024px) {
     .about-banner img {
-        height: 50vh;
+        height: max(200px, 50vh);
     }
 
-    .about-banner-content h1{
-        font-size: max(4rem, 11vw);
+    .about-banner-content h1 {
+        font-size: max(3.5rem, 11vw);
     }
 
-    .about-banner-content h4{
-        font-size: max(1.6rem, 4vw);
+    .about-banner-content h4 {
+        font-size: max(1.4rem, 4vw);
     }
 }
 
+@media screen and (max-width: 786px) {
+    .about-banner img {
+        object-position: center center;
+    }
+
+}
+
 @media screen and (max-width: 400px) {
-    .about{
+    .about {
         margin-top: 50px;
+    }
+
+    .about-content h3{
+        font-size: 2.5rem;
+    }
+
+    .about-content p{
+        font-size: 1rem;
     }
 }

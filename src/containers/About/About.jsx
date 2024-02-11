@@ -1,26 +1,32 @@
-import React from 'react'
-import { Container, Row, Col } from "react-bootstrap"
-import "./About.css"
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import "./About.css";
 import AboutImage from "../../assets/Portfolio/img27.jpg";
-import "animate.css"
-
+import "animate.css";
 
 const About = () => {
   return (
-    <div className = "about">
+    <div className="about">
       <Container className="about-container1" fluid style={{ padding: 0 }}>
         <Row className="g-0">
           <Col size={12} className="about-banner">
-            <img className = "animate__animated animate__fadeIn" src={AboutImage} alt="AboutImage" />
+            <img
+              className="animate__animated animate__fadeIn"
+              src={AboutImage}
+              alt="AboutImage"
+            />
             <div className="about-banner-content animate__animated animate__fadeIn">
               <h1> About Us </h1>
               <h4> Best photography & cinematography studio </h4>
             </div>
           </Col>
         </Row>
+      </Container>
 
-        <Row className = "g-0 about-content-wrapper">
-          <Col className = "about-content" size={12} sm={8}>
+      <Container>
+        <Row className="g-0 about-content-wrapper">
+          <Col className="about-content" size={12} sm={10} lg={8}>
+            <h3> About Us </h3>
             <p>
               Weddings provide a perfect platform for experiencing a gamut of
               emotions, unseen in any other event anywhere. Good wedding
@@ -33,7 +39,7 @@ const About = () => {
         </Row>
       </Container>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

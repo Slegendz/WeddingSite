@@ -12,7 +12,7 @@ import DataContext from "../../context/DataContext";
 // import "react-lazy-load-image-component/src/effects/blur.css";
 // import LazyLoad from "react-lazyload";
 import BannerImg from "./../../assets/port.jpg";
-import "animate.css"
+import "animate.css";
 
 const Portfolio = () => {
   const { index, setIndex, showLightbox, setShowLightbox } =
@@ -55,16 +55,22 @@ const Portfolio = () => {
       <Container className="portfolio-container1" fluid style={{ padding: 0 }}>
         <Row className="g-0">
           <Col size={12} className="portfolio-banner">
-            <img className = "animate__animated animate__fadeIn"src={BannerImg} alt="bannerImg" />
+            <img
+              className="animate__animated animate__fadeIn"
+              src={BannerImg}
+              alt="bannerImg"
+            />
             <div className="portfolio-banner-content animate__animated animate__fadeIn">
               <h1> Portfolio </h1>
               <h4> Best Moments of our wedding couples </h4>
             </div>
           </Col>
         </Row>
+      </Container>
 
-        <Row className = "g-0 portfolio-content-wrapper">
-          <Col className = "portfolio-content" size={12} sm={8}>
+      <Container>
+        <Row className="g-0 portfolio-content-wrapper">
+          <Col className="portfolio-content" size={12} sm={10} lg={8}>
             <h3> Portfolio </h3>
             <p>
               Weddings provide a perfect platform for experiencing a gamut of
@@ -77,7 +83,7 @@ const Portfolio = () => {
           </Col>
         </Row>
       </Container>
-
+      
       <Container
         className="portfolio-container2"
         style={{ padding: "2rem 8%" }}

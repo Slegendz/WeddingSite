@@ -35,7 +35,7 @@ const Footer = () => {
           </Col>
           <Col size={12} md={3}>
             <div className="footer-nav3 footer-nav">
-              <h4> Follow us for more</h4>
+              <h4> Follow us </h4>
               <div className="footer-nav3-socials">
                 {icons.map((icon, idx) => (
                   <a

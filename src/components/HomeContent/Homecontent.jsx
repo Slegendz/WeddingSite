@@ -135,6 +135,7 @@ const Homecontent = () => {
             className="home-content-container-desc "
           >
             <h2> Real Wedding Stories </h2>
+            <p> A carefully curated collection showcasing some of our most cherished weddings. </p>
           </Col>
         </Row>
 
