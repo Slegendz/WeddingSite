@@ -1,0 +1,1 @@
+import{j as s}from"./index-rEm1Sler.js";import{C as r}from"./Col-Ykklimht.js";const a=({url:m})=>s.jsx(r,{sm:12,md:6,style:{padding:"0.5rem",margin:0,gap:0},children:s.jsx("div",{className:"home-films-wrapper",children:s.jsx("iframe",{className:"home-films-wrapper-player",src:`https://www.youtube.com/embed/${m}?&origin=http://localhost:5173/`})})});export{a as H};
