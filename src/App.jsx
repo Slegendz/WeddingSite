@@ -1,11 +1,11 @@
-// import { Navbar, Footer, Home, Stories, Portfolio, Cinematography, Contact, About, Missing } from "./components"
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import React, { useState, useEffect, lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { DataProvider } from "./context/DataContext";
 import whatsapp from "./assets/Icons/whatsapp.svg";
-import { FaArrowUp } from "react-icons/fa";
+import { useLocation } from "react-router";
+import StoryPage from "./components/StoryPage/StoryPage"
 
 const Navbar = lazy(() => import("./components/Navbar/Navbar"));
 const Footer = lazy(() => import("./components/Footer/Footer"));
@@ -20,11 +20,11 @@ const Contact = lazy(() => import("./containers/Contact/Contact"));
 const Missing = lazy(() => import("./containers/Missing/Missing"));
 
 const Whatsapp = () => (
-  <div className="whatsapp">
-    <div className="icon">
+  <div className="App-whatsapp">
+    <div className="App-icon">
       <img src={whatsapp} alt="whatsapp" />
     </div>
-    <div className="content">Contact us!</div>
+    <div className="App-content"> Whatsapp Us!</div>
   </div>
 );
 
@@ -44,32 +44,46 @@ const FallbackLoader = () => (
   </div>
 );
 
+const ScrollToTop = (props) => {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  return <>{props.children}</>;
+};
+
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Navbar />
+        <Navbar />
         <Suspense fallback={<FallbackLoader />}>
           <DataProvider>
-            <Routes>
-              <Route exact path="/" element={<Home />} />
+            <ScrollToTop>
+              <Routes>
+                <Route exact path="/" element={<Home />} />
 
-              <Route exact path="/home" element={<Home />} />
-              <Route exact path="/stories" element={<Stories />} />
-              <Route exact path="/portfolio" element={<Portfolio />} />
+                <Route exact path="/home" element={<Home />} />
+                <Route exact path="/stories" element={<Stories />} />
+                <Route exact path="/stories/:id" element={<StoryPage />} />
+                <Route exact path="/portfolio" element={<Portfolio />} />
 
-              <Route
-                exact
-                path="/cinematography"
-                element={<Cinematography />}
-              />
-              <Route exact path="/contact-us" element={<Contact />} />
-              <Route exact path="/about-us" element={<About />} />
-              <Route exact path="*" element={<Missing />} />
-            </Routes>
+                <Route
+                  exact
+                  path="/cinematography"
+                  element={<Cinematography />}
+                />
+                <Route exact path="/contact-us" element={<Contact />} />
+                <Route exact path="/about-us" element={<About />} />
+                <Route exact path="*" element={<Missing />} />
+              </Routes>
+            </ScrollToTop>
           </DataProvider>
-          {/* <button onclick={() => window.scrollTo(0,0)}> <FaArrowUp /> </button> */}
-          {/* <Whatsapp /> */}
+
+          <a href="#">
+            <Whatsapp />
+          </a>
 
           <Footer />
         </Suspense>

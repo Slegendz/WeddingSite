@@ -8,6 +8,7 @@ import HomeFilms from "../HomeFilms/HomeFilms";
 import HomeStory from "../HomeStory/HomeStory";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import StoriesData from "../../assets/stories/storyAsset"
 
 const Homecontent = () => {
 
@@ -148,7 +149,7 @@ const Homecontent = () => {
             autoPlaySpeed={3000}
             removeArrowOnDeviceType={["tablet", "mobile"]}
           >
-            {stories.map((story, idx) => (
+            {StoriesData.map((story, idx) => (
               <HomeStory {...story} key={idx} />
             ))}
           </Carousel>

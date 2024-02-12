@@ -3,6 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import "./Stories.css";
 import StoryImage from "../../assets/Portfolio/img1.jpg";
 import "animate.css";
+import StoriesData from "../../assets/stories/storyAsset";
+import HomeStory from "../../components/HomeStory/HomeStory";
 
 const Stories = () => {
   return (
@@ -40,6 +42,14 @@ const Stories = () => {
               capture.
             </p>
           </Col>
+        </Row>
+
+        <Row style = {{ marginBottom: "5rem"}}>
+          {StoriesData.map((story, idx) => (
+            <Col md={4} >
+              <HomeStory {...story} key={idx} />
+            </Col>
+          ))}
         </Row>
       </Container>
     </div>

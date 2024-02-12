@@ -133,6 +133,65 @@
 }
 
 
+.home-box {
+    margin-top: 2rem;
+    /* background-image: url('../../assets/Bg/shiny.svg'); */
+    background-color: #ffbf00;
+    padding: 2rem 0;
+}
+
+.home-box-wrapper {
+    justify-content: center;
+    align-items: center;
+}
+
+.home-box-wrapper-contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.home-box-wrapper-contacts h3 {
+    font-size: 2.5rem;
+    font-family: "Protest Riot";
+    color: #253529;
+    font-weight: bold;
+}
+
+.home-box-wrapper-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+
+.home-box-wrapper-content::before {
+    width: 5px;
+    border-radius: 8px;
+    height: 100%;
+    position: absolute;
+    content: "";
+    background-color: #253529;
+    top: 0;
+    left: -10px;
+}
+
+.home-box-wrapper-content p {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #253529;
+}
+
+.home-box-wrapper-content button {
+    font-size: 1.3rem;
+    color: gold;
+    background-color: #253529;
+    border-radius: 15px;
+}
+
+
 @media screen and (max-width: 991px) {
     .home-banner-vid {
         height: 50vh;
@@ -177,6 +236,35 @@
         margin-top: 2rem;
         width: 70%;
         padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .home-box-wrapper-content {
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .home-box-wrapper-content::before {
+        width: 50%;
+        height: 5px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    .home-box-wrapper-content p {
+        font-size: 1.1rem;
+    }
+
+    .home-box-wrapper-content button {
+        font-size: 1.2rem;
+    }
+
+    .home-box-wrapper-contacts h3 {
+        font-size: 2.2rem;
     }
 }
 

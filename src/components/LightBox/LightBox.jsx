@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useContext } from "react";
 import "./LightBox.css";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
-import { IoIosShareAlt, IoMdDownload } from "react-icons/io";
+import { IoMdDownload } from "react-icons/io";
 import { useSwipeable } from "react-swipeable";
 import { saveAs } from "file-saver";
 import DataContext from "../../context/DataContext";
@@ -86,9 +86,6 @@ const LightBox = ({ images }) => {
                       onClick={() => downloadImage(img, title)}
                     >
                       <IoMdDownload />
-                    </button>
-                    <button className="share-icon">
-                      <IoIosShareAlt />
                     </button>
                     <button
                       className="close-icon"

@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
-import MangalLogo from "../../assets/Icons/logo-min.png"
-import { NavLink } from "react-router-dom";
+import MangalLogo from "../../assets/Icons/logo-min.png";
+import { NavLink, Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import "./Navbar.css";
 import icons from "../../assets/Icons/headerIcon";
@@ -18,9 +18,11 @@ const navbar = () => {
 
   return (
     <Navbar collapseOnSelect style={{ padding: 0 }} expand="lg">
-      <Container className="navbar-container"  style = {{ padding: 0 }}>
-        <Navbar.Brand href="#">
-          <img src={MangalLogo} alt="Logo" />
+      <Container className="navbar-container" style={{ padding: 0 }}>
+        <Navbar.Brand>
+          <Link to="/">
+            <img src={MangalLogo} alt="Logo" />
+          </Link>
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="responsive-navbar-nav">

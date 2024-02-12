@@ -55,14 +55,6 @@ const Contact = () => {
           </Col>
         </Row>
       </Container>
-
-      {/* <Container fluid className = "contact-box">
-        <Row className = "contact-box-wrapper"> 
-        <Col xs={8} className="contact-wrapper-contacts">
-          <h3> Get in Touch with us </h3>
-        </Col>
-        </Row>
-      </Container> */}
     </div>
   );
 };

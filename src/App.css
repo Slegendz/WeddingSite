@@ -3,11 +3,8 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
-
-/* .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-} */
 
 .home,
 .stories,
@@ -15,10 +12,53 @@
 .missing,
 .contact,
 .cinematography,
-.about {
+.about,
+.story-page {
   display: flex;
   width: 100%;
   flex-grow: 1;
   min-height: 100vh;
   flex-direction: column;
+}
+
+.App-whatsapp{
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #25D366;
+  z-index: 1000;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  width: 200px;
+  padding: 0.3rem 0.5rem;
+  border-radius: 20px;
+}
+
+.App-icon img{
+  width: 30px;
+  height: 30px;
+}
+
+.App-content{
+  color: whitesmoke;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 556px){
+  .App-whatsapp{
+    width: 160px;
+    gap: 0.3rem;
+  }
+
+  .App-content{
+    font-size: 0.9rem;
+  }
+
+  .App-icon img{
+    width: 28px;
+    height: 28px;
+  }
 }

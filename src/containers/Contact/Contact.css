@@ -127,11 +127,12 @@
 }
 
 .contact-wrapper {
+    width: 100%;
     color: #16202fdb;
     margin: 2rem 0;
 }
 
-.contact-wrapper-form{
+.contact-wrapper-form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -158,21 +159,7 @@
     background-color: gold;
 }
 
-/* .contact-box{
-    margin-top: 2rem;
-    background-color: gold;
-    height: 160px;
-}
-
-.contact-box-wrapper{
-    justify-content: center;
-}
-
-.contact-wrapper-contacts{
-
-} */
-
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 991px) {
     .contact-banner img {
         height: max(200px, 50vh);
     }
@@ -189,12 +176,12 @@
         font-size: 1.2rem;
     }
 
-    .contact-wrapper{
+    .contact-wrapper {
         margin-top: 1rem;
         gap: 2rem;
     }
 
-    .contact-wrapper-form{
+    .contact-wrapper-form {
         padding: 0 1rem;
     }
 }

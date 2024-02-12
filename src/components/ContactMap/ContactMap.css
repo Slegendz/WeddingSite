@@ -37,7 +37,7 @@
 @media screen and (max-width: 991px){
     .contact-map {
         height: auto;
-        aspect-ratio: 16/9;
+        aspect-ratio: 4/3;
     }
 }
 

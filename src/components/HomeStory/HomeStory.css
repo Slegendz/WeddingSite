@@ -16,6 +16,7 @@
     position: relative;
     border-radius: 30px;
     overflow: hidden;
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.334);
 }
 
 .home-content-story-image img{
@@ -35,17 +36,21 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.371) , rgba(0, 0, 0, 0.911));
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.226) , rgba(0, 0, 0, 0.79));
     opacity: 0.8;
     transition: all 0.5s ease-in-out;
 }
 
 .home-content-story-image:hover .home-story-overlay{
-    opacity: 0.9;
+    opacity: 1;
 }
 
 .home-content-story-image:hover img{
     transform: scale(1.05);
+}
+
+.home-content-story-image:hover .home-content-story-title h5{
+    color: gold;
 }
 
 .home-content-story-title{
@@ -63,4 +68,5 @@
 
 .home-content-story-title h5{
     font-size: 2rem;
+    transition: all 0.5s ease-in-out;
 }

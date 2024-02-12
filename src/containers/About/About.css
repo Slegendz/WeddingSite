@@ -14,7 +14,6 @@
     height: 70vh;
     object-fit: cover;
     object-position: center center;
-    object-position: center calc(50% + 60px);
 }
 
 .about-banner-content::before {
@@ -118,6 +117,115 @@
     margin: 1rem 0 2rem 0;
 }
 
+
+.about-info-section{
+    margin: 4rem 0;
+}
+
+.about-info-section-img img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center calc(50% + 90px);
+    aspect-ratio: 4/3;
+    transform: rotate(-6deg);
+}
+
+.about-info-section-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 3rem;
+}
+
+.about-info-section-content h3{
+    font-weight: 600;
+    font-size: 2.4rem;
+    font-family: "Yanone Kaffeesatz";
+    letter-spacing: 0.5px;
+    color: #16202fdb;
+    padding: 0.3rem 0;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.about-info-section-content h3::before {
+    content: "";
+    height: 5px;
+    border-radius: 5px;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: gold;
+}
+
+.about-info-section-content-desc p{
+    font-size: 1.1rem;
+    color: #7a7a7a;
+    margin-bottom: 0.6rem;
+}
+
+
+.about-box {
+    margin-top: 2rem;
+    background-color: #FFBF00;
+    padding: 2rem 0;
+}
+
+.about-box-wrapper {
+    justify-content: center;
+    align-items: center;
+}
+
+.about-box-wrapper-contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.about-box-wrapper-contacts h3 {
+    font-size: 2.5rem;
+    font-family: "Protest Riot";
+    text-align: center;
+    color: #253529;
+    font-weight: bold;
+}
+
+.about-box-wrapper-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+
+.about-box-wrapper-content::before {
+    width: 5px;
+    border-radius: 8px;
+    height: 100%;
+    position: absolute;
+    content: "";
+    background-color: #253529;
+    top: 0;
+    left: -10px;
+}
+
+.about-box-wrapper-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #253529;
+}
+
+.about-box-wrapper-content button {
+    font-size: 1.3rem;
+    color: gold;
+    background-color: #253529;
+    border-radius: 15px;
+}
+
 @media screen and (max-width: 1024px) {
     .about-banner img {
         height: max(200px, 50vh);
@@ -132,11 +240,83 @@
     }
 }
 
-@media screen and (max-width: 786px) {
-    .about-banner img {
-        object-position: center center;
+@media screen and (max-width: 991px){
+    .about-info-container{
+        max-width: none;
+        width: 100%;
     }
 
+    .about-info-section{
+        align-items: center;
+        flex-direction: column;
+        margin: 2rem 0;
+        margin-bottom: 0;
+    }
+
+    .about-info-section-img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-info-section-img img{
+        width: 80%;
+    }
+
+    .about-info-section-content{
+        margin-top: 2rem;
+        width: 70%;
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .about-box-wrapper-content {
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .about-box-wrapper-content::before {
+        width: 50%;
+        height: 5px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    .about-box-wrapper-content p {
+        font-size: 1.1rem;
+    }
+
+    .about-box-wrapper-content button {
+        font-size: 1.2rem;
+    }
+
+    .about-box-wrapper-contacts h3 {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 556px){
+    .about-info-section-content{
+        width: 100%;
+    }
+
+    .about-info-section-content-desc p{
+        font-size: 1rem;
+        color: #7a7a7a;
+    }
+
+    .about-info-section-content h3{
+        font-size: 2.1rem;
+    }
+
+    .about-info-section{
+        margin: 1rem 0;
+        margin-bottom: 0;
+    }
 }
 
 @media screen and (max-width: 400px) {
