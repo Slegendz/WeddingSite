@@ -21,7 +21,7 @@ const navbar = () => {
       <Container className="navbar-container" style={{ padding: 0 }}>
         <Navbar.Brand>
           <Link to="/">
-            <img src={MangalLogo} alt="Logo" />
+            <img src = {MangalLogo} alt="Logo" />
           </Link>
         </Navbar.Brand>
 

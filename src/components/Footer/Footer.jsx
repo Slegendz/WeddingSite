@@ -16,7 +16,7 @@ const Footer = () => {
         <Row>
           <Col size={12} md={3}>
             <div className="footer-nav-mid footer-nav">
-              <Link to = "/" > <img src={MangalLogo} height="70" alt="Mangal-Logo" /> </Link>
+              <Link to = "/" > <img className = "footer-logo" src={MangalLogo} height="70" alt="Mangal-Logo" /> </Link>
               <p> Mangal Tithi </p>
             </div>
           </Col>
@@ -46,8 +46,8 @@ const Footer = () => {
                     className="footer-links-icon"
                   >
                     <img
-                      width="36px"
-                      height="36px"
+                      width="34px"
+                      height="34px"
                       src={icon.img}
                       alt={icon.title}
                     />

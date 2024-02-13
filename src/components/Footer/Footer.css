@@ -14,6 +14,10 @@
     gap: 0.4rem;
 }
 
+.footer-logo{
+    padding: 0.4rem;
+}
+
 .footer-nav-contact,
 .footer-nav-links{
     display: flex;
