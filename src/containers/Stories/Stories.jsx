@@ -4,7 +4,7 @@ import "./Stories.css";
 import StoryImage from "../../assets/Portfolio/img1.jpg";
 import "animate.css";
 import StoriesData from "../../assets/stories/storyAsset";
-import HomeStory from "../../components/HomeStory/HomeStory";
+import StoryCards from "../../components/StoryCards/StoryCards";
 
 const Stories = () => {
   return (
@@ -44,10 +44,10 @@ const Stories = () => {
           </Col>
         </Row>
 
-        <Row style = {{ marginBottom: "5rem"}}>
+        <Row className = "stories-storypage">
           {StoriesData.map((story, idx) => (
-            <Col md={4} >
-              <HomeStory {...story} key={idx} />
+            <Col key = {idx} md={6} lg = {4} >
+              <StoryCards {...story} />
             </Col>
           ))}
         </Row>

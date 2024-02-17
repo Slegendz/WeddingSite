@@ -26,30 +26,11 @@ const Portfolio = () => {
   const items = portfolioImages.map((image, idx) => (
     <img
       key={idx}
-      loading="lazy"
       src={image.img}
       onClick={() => showPortfolio(idx)}
     />
-
-    // <LazyLoad key={idx} height={200} offset={100} once>
-    //   <img src={image.img} onClick={() => showPortfolio(idx)} />
-    // </LazyLoad>
   ));
-
-  // const PortfolioImages = portfolioImages.map((image, idx) => (
-  //   <LazyLoadImage
-  //     key={idx}
-  //     alt="Wedding Photography Pics"
-  //     height={image.height}
-  //     scrollPosition={scrollPosition}
-  //     effect="blur"
-  //     src={image.img}
-  //     width={image.width}
-  //     onClick={() => showPortfolio(idx)}
-  //     visibleByDefault={image.img === image.img}
-  //   />
-  // ));
-
+  
   return (
     <div className="portfolio">
       <Container className="portfolio-container1" fluid style={{ padding: 0 }}>
@@ -91,8 +72,6 @@ const Portfolio = () => {
         <ResponsiveMasonry
           columnsCountBreakPoints={{ 300: 1, 500: 2, 700: 3, 900: 3, 1600: 4 }}
         >
-          {/* <PortfolioImages scrollPosition={scrollPosition} /> */}
-          {/* {PortfolioImages} */}
           <Masonry className="portfolio-images-wrapper">{items}</Masonry>
         </ResponsiveMasonry>
 

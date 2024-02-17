@@ -11,45 +11,6 @@ import "react-multi-carousel/lib/styles.css";
 import StoriesData from "../../assets/stories/storyAsset"
 
 const Homecontent = () => {
-
-  const stories = [
-    {
-      id: 1,
-      title: "Ravina X ravin",
-      img: images[0].img,
-    },
-    {
-      id: 2,
-      title: "savina X savin",
-      img: images[1].img,
-    },
-    {
-      id: 3,
-      title: "zavsina X zavin",
-      img: images[2].img,
-    },
-    {
-      id: 4,
-      title: "mavina X mravin",
-      img: images[3].img,
-    },
-    {
-      id: 5,
-      title: "Ravina X ravin",
-      img: images[4].img,
-    },
-    {
-      id: 6,
-      title: "Ravinfda X radn",
-      img: images[5].img,
-    },
-    {
-      id: 7,
-      title: "Rea X ravmv",
-      img: images[6].img,
-    },
-  ];
-
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },

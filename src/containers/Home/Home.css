@@ -15,6 +15,7 @@
     width: 100%;
     position: relative;
     height: auto;
+    background-image: url('./fallback.png');
     object-fit: cover;
 }
 

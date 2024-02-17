@@ -26,7 +26,7 @@ const Footer = () => {
 
               <div className="footer-nav-links">
                 <Link to="/portfolio"> <PiLinkSimple/> Portfolio </Link>
-                <Link to="/stories"><PiLinkSimple/>  Story </Link>
+                <Link to="/stories"><PiLinkSimple/>  Stories </Link>
                 <Link to="/cinematography"> <PiLinkSimple/> Cinematography </Link>
                 <Link to="/about-us"> <PiLinkSimple/> About </Link>
                 <Link to="/contact-us"> <PiLinkSimple/> Contact </Link>

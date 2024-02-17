@@ -118,6 +118,10 @@
     margin: 1.5rem 0;
 }
 
+.stories-storypage{
+    margin-bottom: 5rem;
+}
+
 @media screen and (max-width: 1024px) {
     .stories-banner img {
         height: max(200px, 50vh);

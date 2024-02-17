@@ -5,7 +5,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { DataProvider } from "./context/DataContext";
 import whatsapp from "./assets/Icons/whatsapp.svg";
 import { useLocation } from "react-router";
-import StoryPage from "./components/StoryPage/StoryPage"
 
 const Navbar = lazy(() => import("./components/Navbar/Navbar"));
 const Footer = lazy(() => import("./components/Footer/Footer"));
@@ -18,6 +17,7 @@ const Cinematography = lazy(() =>
 const About = lazy(() => import("./containers/About/About"));
 const Contact = lazy(() => import("./containers/Contact/Contact"));
 const Missing = lazy(() => import("./containers/Missing/Missing"));
+const StoryPage = lazy(() => import("./components/StoryPage/StoryPage"));
 
 const Whatsapp = () => (
   <div className="App-whatsapp">

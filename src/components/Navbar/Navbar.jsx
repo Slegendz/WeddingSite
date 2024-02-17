@@ -21,7 +21,7 @@ const navbar = () => {
       <Container className="navbar-container" style={{ padding: 0 }}>
         <Navbar.Brand>
           <Link to="/">
-            <img src = {MangalLogo} alt="Logo" />
+            <img src={MangalLogo} alt="Logo" />
           </Link>
         </Navbar.Brand>
 
@@ -33,11 +33,12 @@ const navbar = () => {
           <Nav>
             {navigation.map((obj, idx) => (
               <Nav.Link
-                as={NavLink}
-                to={obj.link}
                 key={idx}
-                eventKey={idx + 1}
-                className={({ isActive }) => (isActive ? "active" : "")}
+                to={obj.link}
+                as = {NavLink}
+                activeclassname="active"
+                eventKey = {idx}
+                exact="true"
               >
                 {obj.name}
               </Nav.Link>
