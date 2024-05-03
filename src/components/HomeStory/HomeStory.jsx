@@ -6,7 +6,7 @@ const HomeStory = ({ id, title, headerImg }) => {
   return (
     <div className="home-content-story">
       <div className="home-content-story-image">
-        <img src={headerImg} alt={title} />
+        <img loading = "lazy" src={headerImg} alt={title} />
         <Link to={`/stories/${id}`}>
           <div className="home-story-overlay"></div>
         </Link>

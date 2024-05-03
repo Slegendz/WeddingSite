@@ -30,7 +30,7 @@ const Home = () => {
       <Container className="home-hero-container">
         <Row className="g-0 home-hero-section">
           <Col md={7} className="home-hero-section-img">
-            <img src={HeroImg} alt="Couple Image" />
+            <img loading = "lazy" src={HeroImg} alt="Couple Image" />
           </Col>
           <Col md={5} className="home-hero-section-content">
             <h3> Mangal Tithi </h3>

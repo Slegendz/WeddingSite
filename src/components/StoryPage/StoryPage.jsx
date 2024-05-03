@@ -24,7 +24,7 @@ const StoryPage = () => {
       <Row className="story-content-gallery">
         {storyData.imgUrl.map((image, idx) => (
           <Col key={idx} sm={10} lg={8} className="story-page-images">
-            <img src={image.img} alt="couple image" />
+            <img loading = "lazy" src={image.img} alt="couple image" />
           </Col>
         ))}
       </Row>

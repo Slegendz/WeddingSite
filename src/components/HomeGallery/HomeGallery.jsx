@@ -14,7 +14,7 @@ const HomeGallery = ({ img, title, idx }) => {
   return (  
     <Col sm={6} lg={3} xl={2.4} style = {{ padding: "0.2rem", margin: 0, gap : 0}}>
       <div className="home-gallery-images">
-        <img src={img} alt = {title} onClick={() => showImage(idx)}/>
+        <img src={img} alt = {title} loading = "lazy" onClick={() => showImage(idx)}/>
       </div>
     </Col>
   );

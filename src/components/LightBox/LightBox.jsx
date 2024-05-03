@@ -7,7 +7,6 @@ import { useSwipeable } from "react-swipeable";
 import { saveAs } from "file-saver";
 import DataContext from "../../context/DataContext";
 import "animate.css";
-import ArrowKeysReact from "arrow-keys-react";
 
 const LightBox = ({ images }) => {
   const { index, setIndex } = useContext(DataContext);
