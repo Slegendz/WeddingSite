@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import "./Stories.css";
 import StoryImage from "../../assets/Portfolio/img1.jpg";
 import "animate.css";
-import StoriesData from "../../assets/stories/storyAsset";
+import StoriesData from "../../assets/stories/homeStoryAsset.js";
 import StoryCards from "../../components/StoryCards/StoryCards";
 
 const Stories = () => {

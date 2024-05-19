@@ -111,6 +111,11 @@
     background-color: gold;
 }
 
+.portfolio-container2{
+    width: 100%;
+    padding: 0 2rem;
+}
+
 .portfolio-content p {
     font-size: 1.1rem;
     color: #7a7a7a;
@@ -119,6 +124,10 @@
 }
 
 @media screen and (max-width: 1024px) {
+    .portfolio-container2{
+        padding: 0;
+    }
+    
     .portfolio-banner img {
         height: max(200px, 50vh);
     }

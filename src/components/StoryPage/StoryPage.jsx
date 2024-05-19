@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import StoriesData from "../../assets/stories/storyAsset";
+import StoriesData from "../../assets/stories/storyAsset.js";
 import { useParams, Link } from "react-router-dom";
 import "./StoryPage.css";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";

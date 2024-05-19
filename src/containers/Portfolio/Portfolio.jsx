@@ -24,13 +24,9 @@ const Portfolio = () => {
   };
 
   const items = portfolioImages.map((image, idx) => (
-    <img
-      key={idx}
-      src={image.img}
-      onClick={() => showPortfolio(idx)}
-    />
+    <img key={idx} src={image.img} onClick={() => showPortfolio(idx)} />
   ));
-  
+
   return (
     <div className="portfolio">
       <Container className="portfolio-container1" fluid style={{ padding: 0 }}>
@@ -64,16 +60,21 @@ const Portfolio = () => {
           </Col>
         </Row>
       </Container>
-      
-      <Container
-        className="portfolio-container2"
-        style={{ padding: "2rem 8%" }}
-      >
-        <ResponsiveMasonry
-          columnsCountBreakPoints={{ 300: 1, 500: 2, 700: 3, 900: 3, 1600: 4 }}
-        >
-          <Masonry className="portfolio-images-wrapper">{items}</Masonry>
-        </ResponsiveMasonry>
+
+      <Container style={{ padding: "2rem 0" }}>
+        <div className="portfolio-container2">
+          <ResponsiveMasonry
+            columnsCountBreakPoints={{
+              300: 1,
+              500: 2,
+              700: 3,
+              900: 3,
+              1600: 4,
+            }}
+          >
+            <Masonry className="portfolio-images-wrapper">{items}</Masonry>
+          </ResponsiveMasonry>
+        </div>
 
         <LightBox images={portfolioImages} />
       </Container>

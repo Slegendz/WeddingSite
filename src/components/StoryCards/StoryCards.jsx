@@ -6,7 +6,7 @@ const StoryCards = ({ id, title, headerImg }) => {
   return (
     <div className="story-card-content">
       <div className="story-card-content-image">
-        <img loading = "lazy" src={headerImg} alt={title} />
+        <img src={headerImg} alt={title} />
         <Link to={`/stories/${id}`}>
           <div className="story-card-overlay"></div>
         </Link>

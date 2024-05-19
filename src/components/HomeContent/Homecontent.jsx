@@ -8,7 +8,7 @@ import HomeFilms from "../HomeFilms/HomeFilms";
 import HomeStory from "../HomeStory/HomeStory";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import StoriesData from "../../assets/stories/storyAsset"
+import HomeStoriesData from "../../assets/stories/homeStoryAsset.js";
 
 const Homecontent = () => {
   const responsive = {
@@ -34,18 +34,17 @@ const Homecontent = () => {
 
   return (
     <div className="home-content">
-      <Container>
+      <Container >
         <Row className="home-content-desc">
           <Col sm={10} lg={8} className="home-content-container-desc ">
             <h2> Wedding Photography & Cinematography </h2>
             <p>
-              We are a Wedding Photography Studio
-              located in Dehradun, India. We're known for our fun,
-              unconventional, and contemporary style in capturing the special
-              moments of your big day. We began by photographing Indian weddings
-              and have since crafted countless unique love stories globally. Our
-              team is passionate, dedicated, and eager to be a part of your
-              Indian wedding celebration!
+              We are a Wedding Photography Studio located in Dehradun, India.
+              We're known for our fun, unconventional, and contemporary style in
+              capturing the special moments of your big day. We began by
+              photographing Indian weddings and have since crafted countless
+              unique love stories globally. Our team is passionate, dedicated,
+              and eager to be a part of your Indian wedding celebration!
             </p>
           </Col>
         </Row>
@@ -80,13 +79,13 @@ const Homecontent = () => {
         </Row>
       </Container>
 
-        <Container className = "home-films-container">
-          <Row className="home-content-films">
-            {videoUrl.map((url, idx) => (
-              <HomeFilms url={url} key={idx} />
-            ))}
-          </Row>
-        </Container>
+      <Container className="home-films-container" >
+        <Row className="home-content-films">
+          {videoUrl.map((url, idx) => (
+            <HomeFilms url={url} key={idx} />
+          ))}
+        </Row>
+      </Container>
 
       <Container>
         <Row className="home-content-desc">
@@ -97,7 +96,11 @@ const Homecontent = () => {
             className="home-content-container-desc "
           >
             <h2> Real Wedding Stories </h2>
-            <p> A carefully curated collection showcasing some of our most cherished weddings. </p>
+            <p>
+              {" "}
+              A carefully curated collection showcasing some of our most
+              cherished weddings.{" "}
+            </p>
           </Col>
         </Row>
 
@@ -110,7 +113,7 @@ const Homecontent = () => {
             autoPlaySpeed={3000}
             removeArrowOnDeviceType={["tablet", "mobile"]}
           >
-            {StoriesData.map((story, idx) => (
+            {HomeStoriesData.map((story, idx) => (
               <HomeStory {...story} key={idx} />
             ))}
           </Carousel>
