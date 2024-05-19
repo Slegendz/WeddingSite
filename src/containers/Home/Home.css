@@ -15,7 +15,8 @@
     width: 100%;
     height: 90vh;
     background-image: url('./fallback.jpg');
-    background: center no-repeat cover;
+    background-size: cover;
+    background-position: center center;
     object-fit: cover;
     pointer-events: none;
 }
