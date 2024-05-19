@@ -14,6 +14,8 @@
 
 .home-films-placeholder {
     width: 100%;
+    object-fit: cover;
+    height: 100%;
 }
 
 .home-films-button {
@@ -38,3 +40,9 @@
     background-size: 12%;
     background-color: rgba(0, 0, 0, 0.408);
 }
+/* 
+@media screen and (max-width: 480px) {
+    .home-films-wrapper {
+        aspect-ratio: 4/3;
+    }
+} */
