@@ -13,7 +13,7 @@ const Home = () => {
       <Container fluid style={{ padding: 0 }}>
         <Row className="g-0">
           <Col size={12} className="home-banner">
-            <video className="home-banner-vid" loading = "lazy" muted autoPlay>
+            <video className="home-banner-vid" loading = "lazy" muted autoPlay preload = "meta">
               <source src={shwetaVid} type="video/mp4" />
             </video>
             <div className="home-banner-content animate__animated animate__fadeIn">

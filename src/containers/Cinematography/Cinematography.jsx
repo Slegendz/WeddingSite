@@ -6,7 +6,7 @@ import "animate.css";
 import HomeFilms from "../../components/HomeFilms/HomeFilms";
 
 const Cinematography = () => {
-  const cineUrl = ["mb3axOiJlSM", "G1655oteWTk", "N0suplyQuVE", "7FbROJKlTYM","mb3axOiJlSM", "G1655oteWTk", "N0suplyQuVE", "7FbROJKlTYM"];
+  const cineUrl = ["mb3axOiJlSM", "G1655oteWTk", "zrDXo0FEMMY", "7FbROJKlTYM","mb3axOiJlSM", "G1655oteWTk", "zrDXo0FEMMY", "7FbROJKlTYM"];
 
   return (
     <div className="cinematography">
