@@ -5,7 +5,7 @@ import { Col } from "react-bootstrap";
 import "./HomeFilms.css";
 import { useState } from "react";
 
-const HomeFilms = ({ url }) => {
+const HomeFilms = ({ url, key }) => {
   const [play, setPlay] = useState(false);
 
   const handlePlay = (e) => {
@@ -18,6 +18,8 @@ const HomeFilms = ({ url }) => {
         {!play && (
           <>
             <img
+              loading={key <= 2 ? "eager" : "lazy"}
+              decoding={key <= 2 ? "sync" : "async"}
               src={`https://i.ytimg.com/vi/${url}/maxresdefault.jpg`}
               className="home-films-placeholder"
             />

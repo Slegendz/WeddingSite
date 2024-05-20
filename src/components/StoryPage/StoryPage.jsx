@@ -24,18 +24,23 @@ const StoryPage = () => {
       <Row className="story-content-gallery">
         {storyData.imgUrl.map((image, idx) => (
           <Col key={idx} sm={10} lg={8} className="story-page-images">
-            <img loading = "lazy" src={image.img} alt="couple image" />
+            <img
+              loading={idx <= 2 ? "eager" : "lazy"}
+              decoding={idx <= 2 ? "sync" : "async"}
+              src={image.img}
+              alt="couple image"
+            />
           </Col>
         ))}
       </Row>
 
-      <Row className = "story-gallery-buttons-wrapper" >
-        <Col sm = {10} lg = {8} className="story-gallery-buttons">
+      <Row className="story-gallery-buttons-wrapper">
+        <Col sm={10} lg={8} className="story-gallery-buttons">
           <Link to={`/stories/${currId - 1 ? currId - 1 : len}`}>
             <button> Prev Story </button>
           </Link>
           <Link to={`/stories/${currId + 1 <= len ? currId + 1 : 1}`}>
-            <button> Next Story  </button>
+            <button> Next Story </button>
           </Link>
         </Col>
       </Row>
