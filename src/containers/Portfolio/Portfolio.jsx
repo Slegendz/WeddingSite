@@ -24,7 +24,7 @@ const Portfolio = () => {
   };
 
   const items = portfolioImages.map((image, idx) => (
-    <img key={idx} src={image.img} onClick={() => showPortfolio(idx)} />
+    <img key={idx} src={image.img} loading = "lazy" decoding = "async" onClick={() => showPortfolio(idx)} />
   ));
 
   return (
